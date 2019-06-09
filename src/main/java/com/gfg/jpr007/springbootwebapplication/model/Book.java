@@ -1,7 +1,13 @@
 package com.gfg.jpr007.springbootwebapplication.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Book {
 
+    @Id
+    private Long id;
     private String isbn;
     private  String title;
 
@@ -26,5 +32,11 @@ public class Book {
         this.title = title;
     }
 
+    public Long getId() {
+        return id;
+    }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
 }
